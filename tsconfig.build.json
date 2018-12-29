@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "declarationDir": "./lib",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmitOnError": true,
+    "outDir": "./lib",
+    "preserveSymlinks": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2018",
+    "lib": [
+      "ES2015",
+      "ES2016",
+      "ES2017",
+      "DOM",
+      "DOM.Iterable",
+      "ScriptHost"
+    ]
+  },
+  "files": [
+    "./src/index.ts"
+  ],
+  "include": [
+    "./types/**/*.d.ts"
+  ]
+}

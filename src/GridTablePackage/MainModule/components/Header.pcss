@@ -1,0 +1,21 @@
+.component {
+    display: flex;
+
+    flex-direction: row;
+}
+
+.columnsPinned {
+    position: sticky;
+    z-index: 2;
+    display: flex;
+}
+
+.columnsPinnedLeft {
+    composes: columnsPinned;
+    left: 0;
+}
+
+.columnsPinnedRight {
+    composes: columnsPinned;
+    right: 0;
+}
