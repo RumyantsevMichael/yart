@@ -12,7 +12,7 @@ export class Row<D extends Datum> extends React.PureComponent<RowComponentProps<
         const { datum, rowKey, index: rowIndex, columns } = this.props;
 
         return columns.map((column, columnIndex) => {
-            const value = datum === undefined ? '' : datum[column.field];
+            const value = datum === undefined ? undefined : datum[column.field];
 
             return (
                 <div
