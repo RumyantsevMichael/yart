@@ -1,7 +1,7 @@
 {
-  "name": "react-grid-table",
+  "name": "yart",
   "version": "0.0.0",
-  "description": "",
+  "description": "Yet another react table",
   "author": "Michael Rumyantsev <Rumyantsev.Michae@gmail.com>",
   "contributors": [
     {
@@ -16,7 +16,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:RumyantsevMichael/react-grid-table.git"
+    "url": "git@github.com:RumyantsevMichael/yart.git"
   },
   "main": "lib/index.js",
   "module": "lib/index.js",
