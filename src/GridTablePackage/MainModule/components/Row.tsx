@@ -3,7 +3,7 @@ import { RowProps } from '../types/RowProps';
 import { Datum } from '../types/Datum';
 import * as css from './Row.pcss';
 import { classList } from '../common/classList';
-import { PinnedPlacement } from '..';
+import { PinnedPlacement } from '../types/PinnedPlacement';
 
 export type RowComponentProps<D extends Datum> = RowProps<D>;
 

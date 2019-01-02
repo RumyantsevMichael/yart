@@ -3,7 +3,7 @@ import { Datum } from '../types/Datum';
 import { ColumnProps } from '../types/ColumnProps';
 import * as css from './Header.pcss';
 import { classList } from '../common/classList';
-import { PinnedPlacement } from '..';
+import { PinnedPlacement } from '../types/PinnedPlacement';
 
 type Props<D extends Datum> = {
     columns: Array<ColumnProps<D, keyof D>>;
