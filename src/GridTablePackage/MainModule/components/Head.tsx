@@ -4,12 +4,10 @@ import { ColumnProps } from '../types/ColumnProps';
 
 type Props<D extends Datum, F extends keyof D> = ColumnProps<D, F>;
 
-export class Head<D extends Datum, F extends keyof D> extends React.Component<Props<D, F>> {
+export class Head<D extends Datum, F extends keyof D> extends React.Component<
+    Props<D, F>
+> {
     render() {
-        return (
-            <div>
-                {this.props.name}
-            </div>
-        );
+        return <div>{this.props.name}</div>;
     }
 }

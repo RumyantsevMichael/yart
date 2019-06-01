@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { Row as DefaultRow } from './Row';
+
 import { Datum } from '../types/Datum';
 import { RowProps } from '../types/RowProps';
 import { ColumnProps } from '../types/ColumnProps';
+import { Row as DefaultRow } from './Row';
 
 type Props<D extends Datum> = {
     data: D[];

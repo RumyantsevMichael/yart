@@ -10,6 +10,8 @@ export type ColumnProps<D extends Datum, F extends keyof D> = {
     minWidth?: string;
     maxWidth?: string;
     pinned?: PinnedPlacement;
-    renderHead: (props: ColumnProps<D, F>) => React.ReactElement<ColumnProps<D, F>>;
+    renderHead: (
+        props: ColumnProps<D, F>,
+    ) => React.ReactElement<ColumnProps<D, F>>;
     renderCell: (props: CellProps<D, F>) => React.ReactElement<CellProps<D, F>>;
 };

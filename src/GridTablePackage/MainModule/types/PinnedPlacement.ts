@@ -1,4 +1,4 @@
 export enum PinnedPlacement {
     left = 'left',
-    right = 'right'
+    right = 'right',
 }

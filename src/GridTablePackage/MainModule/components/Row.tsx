@@ -1,13 +1,17 @@
 import * as React from 'react';
+
 import { RowProps } from '../types/RowProps';
 import { Datum } from '../types/Datum';
-import * as css from './Row.pcss';
 import { classList } from '../common/classList';
 import { PinnedPlacement } from '../types/PinnedPlacement';
 
+import * as css from './Row.pcss';
+
 export type RowComponentProps<D extends Datum> = RowProps<D>;
 
-export class Row<D extends Datum> extends React.PureComponent<RowComponentProps<D>> {
+export class Row<D extends Datum> extends React.PureComponent<
+    RowComponentProps<D>
+> {
     render() {
         const { datum, rowKey, index: rowIndex, columns } = this.props;
 
@@ -16,12 +20,17 @@ export class Row<D extends Datum> extends React.PureComponent<RowComponentProps<
 
             return (
                 <div
-                    key={columnIndex}
+                    key={`${rowIndex}-${columnIndex}`}
                     className={classList({
                         [css.component]: true,
-                        [css.columnsPinnedLeft]: column.pinned === PinnedPlacement.left,
-                        [css.columnsPinnedRight]: column.pinned === PinnedPlacement.right,
+                        [css.columnsPinnedLeft]:
+                            column.pinned === PinnedPlacement.left,
+                        [css.columnsPinnedRight]:
+                            column.pinned === PinnedPlacement.right,
                     })}
+                    style={{
+                        gridRow: rowIndex + 2
+                    }}
                 >
                     {column.renderCell({
                         rowKey: rowKey,
@@ -31,6 +40,5 @@ export class Row<D extends Datum> extends React.PureComponent<RowComponentProps<
                 </div>
             );
         });
-
     }
 }

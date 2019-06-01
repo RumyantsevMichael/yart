@@ -15,8 +15,10 @@ export class Header<D extends Datum> extends React.PureComponent<Props<D>> {
             <div
                 key={columnIndex}
                 className={classList({
-                    [css.columnsPinnedLeft]: column.pinned === PinnedPlacement.left,
-                    [css.columnsPinnedRight]: column.pinned === PinnedPlacement.right,
+                    [css.columnsPinnedLeft]:
+                        column.pinned === PinnedPlacement.left,
+                    [css.columnsPinnedRight]:
+                        column.pinned === PinnedPlacement.right,
                 })}
             >
                 {column.renderHead(column)}
